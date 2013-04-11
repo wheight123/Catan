@@ -41,7 +41,7 @@ public:
     playerNum intToNum(int);//converts integers to playerNum
     void setLongestRoad();  //at the beginnin of every Turn(), check which player has most roads and give them the honor
     void setLargestArmy();  //check which player has the most soldier cards in their DevPlayed and give them the honor
-    Player * goesFirst(vector<Player> playerList);
+    Player  goesFirst(vector<Player> playerList);
     void drawfromDevDeck(); //
     void devIn(devType dt); //brings dev card from devdeck to player's buffer
     void devBuffer();

@@ -1881,7 +1881,7 @@ void Catan::yield(int rollNum){
     }
 }
 
-Player* Catan::goesFirst(vector<Player> playerList)
+Player Catan::goesFirst(vector<Player> playerList)
 {
     int maxRoll=0;
     int currRoll;
@@ -1904,16 +1904,16 @@ Player* Catan::goesFirst(vector<Player> playerList)
         for (int i=0;i<(int)temp.size();i++)
             cout << temp[i].getName() << " and ";
         cout << "tied for first. Rerolling for these players.\n";
-        isFirst.push_back(*goesFirst(temp));
-        return &isFirst[0];
+        isFirst.push_back(goesFirst(temp));
+        return isFirst[0];
     }
-//    cout << "Player " << isFirst[0].getName() << " is first.\n";
-    return &isFirst[0];
+    cout << "Player " << isFirst[0].getName() << " is first.\n";
+    return isFirst[0];
 }
 
 void Catan::decideOrder() {
     cout << "\nDeciding order.\n";
-    Player first=*goesFirst(myplayerList);
+    Player first = goesFirst(myplayerList);
     for (int i=0;i<(int)myplayerList.size();i++)
         cout << myplayerList[i].getName() << " is " << myplayerList[i].getTurn() << endl;
     int firstLoc=0;
