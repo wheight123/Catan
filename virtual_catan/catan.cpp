@@ -1803,9 +1803,10 @@ int Catan::diceRoll(Player currPlayer){
        cin >> input;
     }
     int dieNum;
-    timeval Time;
-    gettimeofday(&Time, NULL);
-    long timeseed=Time.tv_usec ;
+	time_t Time;
+   // timeval Time;
+    time(&Time);
+    long timeseed=Time ;
 //    cout << "time at roll is" << timeseed << endl;
     srand(timeseed);
     int randNum = rand();
@@ -2486,9 +2487,9 @@ void Catan::movingBandit(){
                    return;
                 }
                 else{
-                    timeval Time;
-                    gettimeofday(&Time, NULL);
-                    long timeseed=Time.tv_usec;
+                    time_t Time;
+                    time(&Time);
+                    long timeseed=Time;
                     srand(timeseed);
                     do{
                         invalid=false;

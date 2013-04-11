@@ -988,7 +988,7 @@ void Gameboard::assTerrain()
             if(unassTerrain[terrAss] == DESERT)
                 desHex=i;
                 hexLayer[i].yieldNum=7;
-            if((terrAss==(int)unassTerrain.size()) and desHex!=unassTerrain[terrAss]){
+            if((terrAss==(int)unassTerrain.size()) && desHex!=unassTerrain[terrAss]){
                 cout << "something broke, terrAss is " << terrAss << endl;
                 cout << "desHex is "  << desHex;
                 cout << "and hexagon 0 is " << hexLayer[0].terrType << endl;
@@ -1017,6 +1017,7 @@ void Gameboard::setYield()
      int holdAss1; //holds number of assigned hex
      int holdAss2; //holds number of second assigned hex
      //cout << "making yieldNum 2\n";
+
      srand(time(NULL));
      hexAss1=rand()%availHex.size();
      holdAss1=availHex[hexAss1];

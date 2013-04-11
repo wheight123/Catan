@@ -1,6 +1,6 @@
-#include <QtDeclarative/qdeclarativeview.h>
-#include <QtCore/QCoreApplication>
-#include <QtGui/QFont>
+//#include <QtDeclarative/qdeclarativeview.h>
+//#include <QtCore/QCoreApplication>
+//#include <QtGui/QFont>
 #include <iostream>
 #include <sstream>
 #include <vector>
@@ -43,7 +43,7 @@ string infO(Catan GameProfile, int a, int b);
 
 int main(int argc, char *argv[])
 {
-    QCoreApplication a(argc, argv);
+  //  QCoreApplication a(argc, argv);
 
     //Main Menu
     menuOpen = true;
@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
 
     MainMenu();
 
-    return a.exec();
+    return 0;
 }
 
 
